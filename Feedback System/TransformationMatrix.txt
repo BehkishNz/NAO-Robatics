@@ -1,0 +1,47 @@
+ShoulderPitch =
+ 
+[  cos(q1), 0, sin(q1),       0]
+[        0, 1,       0, -49/500]
+[ -sin(q1), 0, cos(q1),    1/10]
+[        0, 0,       0,       1]
+ 
+ 
+ShoulderRoll =
+ 
+[  cos(q1)*cos(q2), -cos(q1)*sin(q2), sin(q1),       0]
+[          sin(q2),          cos(q2),       0, -49/500]
+[ -cos(q2)*sin(q1),  sin(q1)*sin(q2), cos(q1),    1/10]
+[                0,                0,       0,       1]
+ 
+ 
+Elbowyaw =
+ 
+[  cos(q1)*cos(q2), sin(q1),  cos(q1)*sin(q2),        (21*cos(q1)*cos(q2))/200]
+[          sin(q2),       0,         -cos(q2),       (21*sin(q2))/200 - 49/500]
+[ -cos(q2)*sin(q1), cos(q1), -sin(q1)*sin(q2), 1/10 - (21*cos(q2)*sin(q1))/200]
+[                0,       0,                0,                               1]
+ 
+ 
+ElbowRoll =
+ 
+[ sin(q1)*sin(q3) + cos(q1)*cos(q2)*cos(q3), cos(q3)*sin(q1) - cos(q1)*cos(q2)*sin(q3),  cos(q1)*sin(q2),        (21*cos(q1)*cos(q2))/200]
+[                           cos(q3)*sin(q2),                          -sin(q2)*sin(q3),         -cos(q2),       (21*sin(q2))/200 - 49/500]
+[ cos(q1)*sin(q3) - cos(q2)*cos(q3)*sin(q1), cos(q1)*cos(q3) + cos(q2)*sin(q1)*sin(q3), -sin(q1)*sin(q2), 1/10 - (21*cos(q2)*sin(q1))/200]
+[                                         0,                                         0,                0,                               1]
+ 
+ 
+Wrist =
+ 
+[ sin(q1)*sin(q3) + cos(q1)*cos(q2)*cos(q3), -cos(q1)*sin(q2), cos(q3)*sin(q1) - cos(q1)*cos(q2)*sin(q3),        (21*cos(q1)*cos(q2))/200]
+[                           cos(q3)*sin(q2),          cos(q2),                          -sin(q2)*sin(q3),       (21*sin(q2))/200 - 49/500]
+[ cos(q1)*sin(q3) - cos(q2)*cos(q3)*sin(q1),  sin(q1)*sin(q2), cos(q1)*cos(q3) + cos(q2)*sin(q1)*sin(q3), 1/10 - (21*cos(q2)*sin(q1))/200]
+[                                         0,                0,                                         0,                               1]
+ 
+ 
+End =
+ 
+[ sin(q1)*sin(q3) + cos(q1)*cos(q2)*cos(q3), -cos(q1)*sin(q2), cos(q3)*sin(q1) - cos(q1)*cos(q2)*sin(q3),        (21*cos(q1)*cos(q2))/200 + (3*cos(q1)*sin(q2))/200 - (1231*cos(q3)*sin(q1))/100000 + (113*sin(q1)*sin(q3))/1000 + (113*cos(q1)*cos(q2)*cos(q3))/1000 + (1231*cos(q1)*cos(q2)*sin(q3))/100000]
+[                           cos(q3)*sin(q2),          cos(q2),                          -sin(q2)*sin(q3),                                                                                            (21*sin(q2))/200 - (3*cos(q2))/200 + (113*cos(q3)*sin(q2))/1000 + (1231*sin(q2)*sin(q3))/100000 - 49/500]
+[ cos(q1)*sin(q3) - cos(q2)*cos(q3)*sin(q1),  sin(q1)*sin(q2), cos(q1)*cos(q3) + cos(q2)*sin(q1)*sin(q3), (113*cos(q1)*sin(q3))/1000 - (21*cos(q2)*sin(q1))/200 - (1231*cos(q1)*cos(q3))/100000 - (3*sin(q1)*sin(q2))/200 - (113*cos(q2)*cos(q3)*sin(q1))/1000 - (1231*cos(q2)*sin(q1)*sin(q3))/100000 + 1/10]
+[                                         0,                0,                                         0,                                                                                                                                                                                                   1]
+ 
